@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.yanghui.com" 
+		xmlns="http://www.yanghui.com" 
+			elementFormDefault="qualified">
+			
+			
+			
+	<xs:element name="database" type="database"/>
+	
+	<xs:complexType name="database">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="table" type="table"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="encode" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="table" >
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="column" type="column"/>	
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="prefix" type="xs:string" use="required"/>
+		<xs:attribute name="desc" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="column">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="desc" type="xs:string" use="required"/>
+		<xs:attribute name="fieldType" use="required" type="xs:string"/>
+		<xs:attribute name="primary" type="xs:boolean" use="optional"/>
+		<xs:attribute name="auto" type="xs:boolean" use="optional"/>
+		
+	</xs:complexType>
+
+
+</xs:schema>

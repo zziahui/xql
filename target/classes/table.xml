@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database xmlns="http://www.yanghui.com"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.yanghui.com table.xsd"
+       name="test" encode="utf-8">
+       <table name="user" prefix="tbl" desc="用户">
+       		<column name="id" primary="true" desc="ID" fieldType="int" auto="true"/>
+       		<column name="username" desc="用户名称" fieldType="string"/>
+       </table>
+       
+       <table name="student" prefix="tbl" desc="学生">
+       		<column name="id" primary="true" desc="ID" fieldType="int" auto="true"/>
+       		<column name="name" desc="学生名称" fieldType="string"/>
+       </table>
+</database>
+       
+       
